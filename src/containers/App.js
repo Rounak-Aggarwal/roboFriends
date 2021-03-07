@@ -16,8 +16,8 @@ class App extends React.Component {
     }
 
     componentDidMount(){
-        fetch('https://jsonplaceholder.typicode.com/users')
-        .then(response => response.json())
+        fetch('https://jsonplaceholder.typicode.com/users')                 //returns a promise                      
+        .then(response => response.json())                                  //Json is an in built func provided by fetch or js to parse a json file without using JSON.parse() func
         .then(users => this.setState({robots: users}));   
     }
 
